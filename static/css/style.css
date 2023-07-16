@@ -39,13 +39,14 @@ html
     max-width: 1380px;
     margin: auto;
 }
+
 header .header-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 35px 0 33px;
 }
-header .header-nav ul {
+header .header-nav-ul {
     width: 520px;
     display: flex;
     justify-content: space-between;
@@ -107,6 +108,7 @@ header .burger-menu-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 5rem;
     font-family: 'relaway-regular';
     color: var(--main-white);
     /* gap: 5rem; */
@@ -114,7 +116,7 @@ header .burger-menu-icon {
 .slider-text h1 {
     font-size: 4rem;
     text-transform: capitalize;
-    line-height: 15rem;
+    text-align: center;
 }
 .slider-inner .slider-text h3 {
     margin: 35px 0 37px;
@@ -261,7 +263,7 @@ header .burger-menu-icon {
 .satisfication-cards-container {
     display: flex;
     justify-content: space-between;
-    padding: 5rem;
+    padding: 5rem 0;
 }
 .satisfication-card {
     display: flex;
@@ -442,26 +444,24 @@ header .burger-menu-icon {
     bottom:0;
 }
 .middle-cards-container .country1{
-    background: url(../images/eighth-section-images/eight-section-card-container/eight-section-card-1.png);
+    background-image: url(../images/eighth-section-images/eight-section-card-container/eight-section-card-1.png);
 }
 .middle-cards-container .country2{
-    background: url(../images/eighth-section-images/eight-section-card-container/eight-section-card-2.png);
+    background-image: url(../images/eighth-section-images/eight-section-card-container/eight-section-card-2.png);
 }
 .middle-cards-container .country3{
-    background: url(../images/eighth-section-images/eight-section-card-container/eight-section-card-3.png);
+    background-image: url(../images/eighth-section-images/eight-section-card-container/eight-section-card-3.png);
 }
 .middle-cards-container .country4{
-    background: url(../images/eighth-section-images/eight-section-card-container/eight-section-card-4.png);
+    background-image: url(../images/eighth-section-images/eight-section-card-container/eight-section-card-4.png);
 }
 .middle-container-country {
     position: relative;
     width: 280px;
     height: 450px;
-    background-size: cover;
-    background-repeat: no-repeat;
     cursor: pointer;
     transition: all 0.7s ease;
-    background-position: center;
+    background-position: center ;
 }
 .middle-container-country:hover {
     box-shadow: 0 0 10px rgba(0,0,0,0.6);
@@ -498,16 +498,15 @@ iframe {
 }
 footer {
     background: #141418;
-    /* padding-top: 5rem; */
 }
 footer .footer-upper {
     display: flex;
     justify-content: space-between;
-    padding: 5rem 0;
+    flex-wrap: wrap;
+    padding: 5rem 7rem;
 }
 footer .footer-left {
     display: flex;
-    justify-content: center;
     gap: 5rem;
 }
 footer .footer-left ul {
@@ -520,6 +519,7 @@ footer .footer-left ul li:first-child {
     font-size: 1.3rem;
     margin-bottom: 10px;
     text-transform: capitalize;
+    color: var(--main-white);
 }
 footer .footer-left ul a {
     color: var(--main-white);
@@ -584,4 +584,273 @@ footer .footer-down {
 .hot-services-modal span:hover{
     transform: scale(1.05);
     transition:transform 0.7s ease;
+}
+.scroll-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--header-nav-color);
+    display: flex;
+    border-radius: 50%;
+    padding: 12px;
+    border: 0;
+    transform: translateY(200px);
+    transition:all 0.7s ease;
+}
+@media (max-width:998px){
+    .slider-inner .slider,.slider .slide,.slider-inner .slider-elements{
+        height:550px;
+    }
+    .hot-services-container{
+        flex-direction:column;
+        gap:5rem;
+        align-items:center;
+    }
+    .hot-services-container .hot-services-left{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    .hot-services-container .hot-services-left p{
+        max-width:400px;
+        text-align:center
+    }
+    .video-container video{ 
+        max-width: 550px;
+    }
+    .middle-cards-container {
+        display:grid;
+        grid-template-columns: repeat(2,minmax(0,260px));
+        gap:50px;
+    }
+    .middle-cards-container .middle-container-card p{
+        max-width:260px;
+    }
+    .planningTrip-container {
+        height: 450px;
+        padding-top: 15rem;
+    }
+    footer .footer-upper{
+        padding:3rem 4rem;
+        flex-direction:column;
+        gap:3rem;
+        align-items:center;
+    } 
+}
+@media(max-width:768px){
+    header{
+        position: relative;
+    }
+    header .header-nav-ul{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        z-index: 200;
+        height: 0;
+        overflow: hidden;
+        background-color: black;
+    }
+    .header-nav-ul.header-nav-height{
+        height: auto;
+    }
+    header .header-nav ul li{
+        padding: 1rem 0;
+        width: 100%;
+    }
+    header .header-nav ul li:hover{
+        
+        background-color: #2af598;
+    }
+    header .burger-menu-icon {
+        display: block;
+    }
+    .burger-menu-icon div {
+        border: 2px solid black;
+        width: 27px;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+    .slider-text h1 {
+        font-size: 2rem;
+    }
+   .slider-text h3{
+        font-size: 1.2rem;
+   }
+    .slider-inner .slider{
+        height:400px;
+    }
+    .slider .slide{
+        height:400px;
+    }
+    .slider-inner .slider-text h3{
+        font-size:1rem;
+    }
+    .slider-inner .slider-elements{
+        height:400px;
+    }
+    .hot-services-container{
+        flex-direction:column;
+        gap:5rem;
+        align-items:center;
+    }
+    .hot-services-container .hot-services-left{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+    .hot-services-container .hot-services-left p{
+        max-width:400px;
+        text-align:center
+    }
+    .video-container video {
+        width: 100%;
+        max-width: 450px;
+      }
+    .satisfication-cards-container {
+        gap:50px;
+    }
+    .hot-services-container .hot-services-right {
+        grid-template-columns: repeat(2,minmax(0,265px));
+    }
+    .satisfication-cards-container{
+        flex-direction: column;
+    }
+    .satisfication-cards-container h1{
+        font-size:1.5rem;
+    }
+    .satisfication-cards-container h3{
+        font-size:0.9rem;
+        text-align:center;
+    }
+    .cardSpecial h4{
+        margin:10px 0 15px !important;
+    }
+    .cardSpecial2 img{
+        width:230px;
+    }
+    .planningTrip-container{
+        height:300px;
+        padding-top:7rem;
+    }
+    .middle-cards-container{
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    
+    iframe{
+        height:300px;
+    }
+    footer .footer-upper{
+        padding:3rem 4rem;
+        flex-direction:column;
+        gap:30px;
+        align-items:flex-start;
+    }
+    footer .footer-left{
+        width:100%;
+        justify-content:space-between;
+    }
+    footer .footer-left ul {
+        gap:18px;
+    }
+    footer .footer-left{
+        gap:2rem
+    }
+    footer .footer-down{
+        font-size:18px;
+    }
+    .discount-container h1{
+        font-size:1.7rem;
+    }
+    .discount-container p{
+        font-size:1rem;
+    }
+    .discount-container .form-container input{
+        width:330px;
+        font-size:16px;
+    }
+    .discount-container .form-container button{
+        width:100px;
+        font-size:12px;
+    }
+    .discount-container{
+        padding:5rem 0;
+        background-position: center;
+    }
+    @media (max-width:500px){
+        .slider-inner .slider,.slider .slide,.slider-inner .slider-elements{
+            height:350px;
+        }
+        .slider-text img {
+            width: 200px;
+        }
+        .slider-inner .slider-text h3 {
+            font-size: 14px;
+        }
+        .slider-inner .slider-text {
+            gap:2rem;
+        }
+        .hot-services-container .hot-services-left p{
+            max-width: 270px;
+        }
+        .hot-services-container .hot-services-right {
+            grid-template-columns: repeat(1,minmax(0,265px));
+        }
+        .video-container video {
+            max-width: 320px;
+        }
+        .video-container img{
+            width:30px;
+        }
+        .discount-container {
+            padding: 3rem 0;
+        }
+        .discount-container h1 {
+            font-size: 1.2rem;
+        }
+        .discount-container p {
+            font-size: 14px;
+        }
+        .discount-container .form-container input {
+            width: 300px;
+            font-size: 16px;
+        }
+        .discount-container .form-container button {
+            width: 80px;
+            font-size: 10px;
+        }
+        .planningTrip-container {
+            height: 250px;
+            padding-top: 4rem;
+        }
+        .planningTrip-container h1 {
+            font-size: 2rem;
+            color: black;
+        }
+        .planningTrip-container button {
+            font-size: 20px;
+            color: white;
+            padding: 18px 24px;
+        }
+        .secondary{
+            display: none!important;
+        }
+        footer .footer-left{
+            justify-content: center;
+        }
+        footer .footer-left ul{
+            justify-content: center;
+        }
+        footer .footer-left ul li{
+            text-align: center;
+        }
+        footer .footer-left ul li:first-child{
+            font-size: 2rem !important;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #08aeea;
+        }
+    }
 }

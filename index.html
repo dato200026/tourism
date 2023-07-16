@@ -25,22 +25,22 @@
     <title>Tourism</title>
 </head>
 <body>
-    <header>
+    <header id="header">
         <div class="container">
            <nav class="header-nav">
                 <img src="static/images/header-images/company-logo/tourism-logo.png" alt="main logo">
-                <ul>
+                <ul class="header-nav-ul">
                     <li>
-                        <a href="#">home</a>
+                        <a href="index.html">home</a>
                     </li>
                     <li>
-                        <a href="#">our services</a>
+                        <a href="#hot-service">our services</a>
                     </li>
                     <li>
-                        <a href="#">tour package</a>
+                        <a href="#popular-tours-section">tour package</a>
                     </li>
                     <li>
-                        <a href="#">about us</a>
+                        <a href="#footer">about us</a>
                     </li>
                     <li>
                         <a href="#">api</a>
@@ -126,21 +126,21 @@
                 <h3>we offer</h3>
                 <h1>Popular Tour Package</h1>
                 <div class="middle-cards-container">
-                    <div class="middle-container-card">
+                    <div class="middle-container-card cardSpecial2">
                         <span>honeymood</span>
                         <img src="static/images/fourth-section-images/card-images/card-image-1.png">
                         <p>$299/person</p>
                         <h4>Blue Beauty of Greece</h4>
                         <p>5 Days / 6 Night</p>
                     </div>
-                    <div class="middle-container-card">
+                    <div class="middle-container-card cardSpecial2">
                         <span>honeymood</span>
                         <img src="static/images/fourth-section-images/card-images/card-image-2.png">
                         <p>$178/person</p>
                         <h4>Nature of Phuket</h4>
                         <p>3 Days / 4 Night</p>
                     </div>
-                    <div class="middle-container-card">
+                    <div class="middle-container-card cardSpecial2">
                         <span>honeymood</span>
                         <img src="static/images/fourth-section-images/card-images/card-image-3.png">
                         <p>$1111/person</p>
@@ -244,11 +244,11 @@
             </iframe>
         </section>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="footer-upper">
-            <div class="container">
                 <div class="footer-left">
                     <ul>
+                        <li>quick links</li>
                         <li>
                             <a href="#">Home</a>
                         </li>
@@ -262,7 +262,8 @@
                             <a href="#">infrastucture</a>
                         </li>
                     </ul>
-                    <ul>
+                    <ul class="secondary">
+                        <li>support</li>
                         <li>
                             <a href="#">get started</a>
                         </li>
@@ -276,9 +277,9 @@
                             <a href="#">ipsum</a>
                         </li>
                     </ul>
-                    <ul>
+                    <ul class="secondary">
                         <li>
-                            <a href="#">addresses</a>
+                          addresses
                         </li>
                         <li>
                             <a href="#">14, 1 Ellis bridge ST,</a>
@@ -299,17 +300,19 @@
                          <label for="email">Subscribe to our newsletter
                          </label>
                          <div class="input-container">
-                             <input type="email">
-                             <button></button>
+                             <input type="email" placeholder="Enter Email">
+                             <button>submit</button>
                          </div>
                      </form>
                  </div>
-            </div>
         </div>
         <div class="footer-down">
             trourism©All Rights Reserved
         </div>
     </footer>
+    <a href="#header" class="scroll-to-top">
+        <img src="static/images/first-section-images/jump-top-button-icon/arrow-icon.png">
+    </a>
     <div class="hot-services-modal">
         
     </div>
