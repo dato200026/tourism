@@ -780,18 +780,32 @@ footer .footer-down {
         padding:5rem 0;
         background-position: center;
     }
+}
     @media (max-width:500px){
         .slider-inner .slider,.slider .slide,.slider-inner .slider-elements{
-            height:350px;
+            height:250px;
+        }
+        .prev-slide, .next-slide {
+            width: 40px;
+        }
+        
+        .slider-inner
+        .slider-text h1{
+            font-size:1.2rem;
+            margin-top:30px;
+        }
+        .slider-elements
+        .slider-text img {
+            width: 120px;
         }
         .slider-text img {
             width: 200px;
         }
         .slider-inner .slider-text h3 {
-            font-size: 14px;
+            font-size: 10px;
         }
         .slider-inner .slider-text {
-            gap:2rem;
+            gap:1rem;
         }
         .hot-services-container .hot-services-left p{
             max-width: 270px;
@@ -799,11 +813,21 @@ footer .footer-down {
         .hot-services-container .hot-services-right {
             grid-template-columns: repeat(1,minmax(0,265px));
         }
-        .video-container video {
-            max-width: 320px;
+        .video-container{
+            padding-top:20px;
         }
+        .video-container h3{
+            font-size:12px;
+        }
+        .video-container h1{
+             margin:14px 0;
+             font-size:14px
+         }
         .video-container img{
             width:30px;
+        }
+        .video-container video{
+            width:270px;
         }
         .discount-container {
             padding: 3rem 0;
@@ -835,6 +859,13 @@ footer .footer-down {
             color: white;
             padding: 18px 24px;
         }
+        .discount-container .form-container{
+            flex-direction:column;
+            align-items:center;
+        }
+        .discount-container .form-container button{
+            width:100px;
+        }
         .secondary{
             display: none!important;
         }
@@ -852,5 +883,4 @@ footer .footer-down {
             padding-bottom: 5px;
             border-bottom: 2px solid #08aeea;
         }
-    }
 }
